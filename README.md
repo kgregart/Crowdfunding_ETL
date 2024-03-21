@@ -1,122 +1,71 @@
-# Crowdfunding_ETL
-Project 2
+<div align="center">
 
-The instructions for this mini project are divided into the following subsections:
+# Crowdfunding ETL Mini Project
 
-- Create the Category and Subcategory DataFrames
-- Create the Campaign DataFrame
-- Create the Contacts DataFrame
-- Create the Crowdfunding Database
+[![license][license]][license-url]
+[![python][python]][python-url]
+[![jupyter][jupyter]][jupyter-url]
 
-Create the Category and Subcategory DataFrames
+</div>
 
-1. Extract and transform the crowdfunding.xlsx Excel data to create a category DataFrame that has the following columns:
+## Description
 
-A "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories
+## Table of Contents
 
-A "category" column that contains only the category titles
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Tests](#tests)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Contact](#contact)
+-   [Credits](#credits)
 
+## Installation
 
-2. Export the category DataFrame as category.csv and save it to your GitHub repository.
+1.  Clone the repo
 
-3. Extract and transform the crowdfunding.xlsx Excel data to create a subcategory DataFrame.
+    ```sh
+    git clone https://github.com/kgregart/Crowdfunding_ETL.git
+    ```
 
-4. Export the subcategory DataFrame as subcategory.csv and save it to your GitHub repository.
+2.  Change directories to `Crowdfunding_ETL`
 
-Create the Campaign DataFrame
+    ```sh
+    cd Crowdfunding_ETL
+    ```
 
-1. Extract and transform the crowdfunding.xlsx Excel data to create a campaign DataFrame has the following columns:
+3.  Run `ETL_Mini_Project_Starter_Code.ipynb`
 
-The "cf_id" column
+## Usage
 
-The "contact_id" column
+## Tests
 
-The "company_name" column
+## Contributing
 
-The "blurb" column, renamed to "description"
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-The "goal" column, converted to the float data type
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-The "pledged" column, converted to the float data type
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The "outcome" column
+## License
 
-The "backers_count" column
+[MIT License](https://opensource.org/licenses/MIT)
 
-The "country" column
+## Contact
 
-The "currency" column
+## Credits
 
-The "launched_at" column, renamed to "launch_date" and with the UTC times converted to the datetime format
+[Starter Code Download](https://static.bc-edx.com/data/dl-1-2/m13/lms/starter/Starter_Files.zip)
 
-The "deadline" column, renamed to "end_date" and with the UTC times converted to the datetime format
-
-The "category_id" column, with unique identification numbers matching those in the "category_id" column of the category DataFrame
-
-The "subcategory_id" column, with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame
-
-
-2. Export the campaign DataFrame as campaign.csv and save it to your GitHub repository.
-
-Create the Contacts DataFrame
-
-Choose one of the following two options for extracting and transforming the data from the contacts.xlsx Excel data:
-
-Option 1: Use Python dictionary methods.
-
-Option 2: Use regular expressions.
-
-2. If you chose Option 1, complete the following steps:
-
-Import the contacts.xlsx file into a DataFrame.
-
-Iterate through the DataFrame, converting each row to a dictionary.
-
-Iterate through each dictionary, doing the following:
-
-   Extract the dictionary values from the keys by using a Python list comprehension.
-
-   Add the values for each row to a new list.
-
-   Create a new DataFrame that contains the extracted data.
-
-Split each "name" column value into a first and last name, and place each in a new column.
-
-Clean and export the DataFrame as contacts.csv and save it to your GitHub repository.
-
-3. If you chose Option 2, complete the following steps:
-
-Import the contacts.xlsx file into a DataFrame.
-
-Extract the "contact_id", "name", and "email" columns by using regular expressions.
-
-Create a new DataFrame with the extracted data.
-
-Convert the "contact_id" column to the integer type.
-
-Split each "name" column value into a first and a last name, and place each in a new column.
-
-Clean and then export the DataFrame as contacts.csv and save it to your GitHub repository.
-
-
-
-Create the Crowdfunding Database
-
-1. Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site..
-
-2. Use the information from the ERD to create a table schema for each CSV file.
-
-Note: Remember to specify the data types, primary keys, foreign keys, and other constraints.
-
-3. Save the database schema as a Postgres file named crowdfunding_db_schema.sql, and save it to your GitHub repository.
-
-4. Create a new Postgres database, named crowdfunding_db.
-
-5. Using the database schema, create the tables in the correct order to handle the foreign keys.
-
-6. Verify the table creation by running a SELECT statement for each table.
-
-7. Import each CSV file into its corresponding SQL table.
-
-8. Verify that each table has the correct data by running a SELECT statement for each.
-
+[license]: https://img.shields.io/github/license/kgregart/Crowdfunding_ETL.svg?style=for-the-badge
+[license-url]: https://github.com/kgregart/Crowdfunding_ETL/blob/master/LICENSE
+[python]: https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=ffdd54
+[python-url]: https://www.python.org/
+[jupyter]: https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white
+[jupyter-url]: https://jupyter.org/
