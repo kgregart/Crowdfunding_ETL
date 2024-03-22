@@ -5,6 +5,7 @@
 [![license][license]][license-url]
 [![python][python]][python-url]
 [![jupyter][jupyter]][jupyter-url]
+[![postgres][postgres]][postgres-url]
 
 </div>
 
@@ -38,6 +39,54 @@
 
 ## Usage
 
+1.  Change directories to `Crowdfunding_ETL`
+
+    ```sh
+    cd Crowdfunding_ETL
+    ```
+
+2.  Import `PostgreSQL` Schema
+
+    ```sh
+    psql -f db/schema.sql -p 5432 -U postgres
+    ```
+
+3.  Seed the database
+
+    ```sh
+    psql -f db/schema.sql -p 5432 -U postgres
+    ```
+
+4.  Run queries
+
+    ```sql
+    SELECT
+        *
+    FROM
+        category;
+    ```
+
+    ```sql
+    SELECT
+        *
+    FROM
+        subcategory;
+    ```
+
+    ```sql
+    SELECT
+        *
+    FROM
+        contacts;
+    ```
+
+    ```sql
+    SELECT
+        *
+    FROM
+        campaign;
+    ```
+
 ## Tests
 
 ## Contributing
@@ -69,3 +118,5 @@ Don't forget to give the project a star! Thanks again!
 [python-url]: https://www.python.org/
 [jupyter]: https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white
 [jupyter-url]: https://jupyter.org/
+[postgres]: https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white
+[postgres-url]: https://www.postgresql.org/

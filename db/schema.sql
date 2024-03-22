@@ -6,6 +6,18 @@ DROP DATABASE IF EXISTS crowdfunding_db;
 -- Create the crowdfunding_db database
 CREATE DATABASE crowdfunding_db;
 
+-- Connect to the crowdfunding_db database
+\c crowdfunding_db;
+
+-- Drop existing foreign key constraints and tables if they exist
+DROP TABLE IF EXISTS "campaign";
+
+DROP TABLE IF EXISTS "category";
+
+DROP TABLE IF EXISTS "subcategory";
+
+DROP TABLE IF EXISTS "contacts";
+
 CREATE TABLE IF NOT EXISTS "campaign" (
     "cf_id" INT NOT NULL,
     "contact_id" INT NOT NULL,
