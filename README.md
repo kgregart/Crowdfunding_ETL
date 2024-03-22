@@ -11,6 +11,8 @@
 
 ## Description
 
+![ERD](/db/QuickDBD.png)
+
 ## Table of Contents
 
 -   [Installation](#installation)
